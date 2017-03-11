@@ -1,13 +1,6 @@
 // Example Album Object
 
 var albumPicasso = {
-    
-    
-    
-    
-    
-    
-
     title: 'The Colors',
     artist: 'Pablo Picasso',
     label: 'Cubism',
@@ -37,6 +30,27 @@ var albumPicasso = {
          { title: 'Wrong phone number', duration: '2:15'}
      ]
  };
+
+// A Third Album Object
+ var albumBeyonce = {
+     title: 'I Am... Sasha Fierce',
+     artist: 'Beyonce',
+     label: 'Sony Music World',
+     year: '2008',
+     albumArtUrl: 'assets/images/album_covers/11.png',
+     songs: [
+         { title: 'If I Were A Boy', duration: '4:09' },
+         { title: 'Halo', duration: '4:21' },
+         { title: 'Disappear', duration: '4:27'},
+         { title: 'Broken-Hearted Girl', duration: '4:37' },
+         { title: 'Ave Maria', duration: '3:41'},
+          { title: 'Smash Into You', duration: '3:41'},
+          { title: 'Satellites', duration: '3:41'},
+          { title: "That's Why You're Beautiful", duration: '3:41'}
+     ]
+ };
+
+
 
 var createSongRow = function(songNumber, songName, songLength){
     var template = '<tr class="album-view-song-item">'
@@ -75,4 +89,23 @@ var setCurrentAlbum = function(album) {
  
  window.onload = function() {
      setCurrentAlbum(albumPicasso);
+     
  };
+
+ var albumImage = document.getElementsByClassName('album-cover-art')[0];
+
+albumImage.addEventListener('click', function() {
+     var albumTitle = document.getElementByClassName('album-view-title')[0]
+    //albumTitle.firstChild.nodeValue
+    if (albumTitle == 'The Colors') {
+        setCurrentAlbum(albumMarconi);
+    }
+    else if (albumTitle == 'The Telephone') {
+        setCurrentAlbum(albumBeyonce);  
+    }
+    else if (albumTitle == 'I am... Sasha Fierce') {
+        setCurrentAlbum(albumPicasso);
+    }
+});
+
+
