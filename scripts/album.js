@@ -95,7 +95,7 @@ var setCurrentAlbum = function(album) {
  var albumImage = document.getElementsByClassName('album-cover-art')[0];
 
 albumImage.addEventListener('click', function() {
-     var albumTitle = document.getElementByClassName('album-view-title')[0]
+     var albumTitle = document.getElementsByClassName('album-view-title')[0].firstChild.nodeValue
     //albumTitle.firstChild.nodeValue
     if (albumTitle == 'The Colors') {
         setCurrentAlbum(albumMarconi);
