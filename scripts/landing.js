@@ -27,10 +27,3 @@ var animatePoints = function() {
     });
  });
 
-
-a = ['hi', 'bye', 'hello', 'goodnight']
-a = a.slice(1,3, 'bonjour')
-=> ['bye', 'goodnight']
-'adios'
-a = a.splice(0, 1)
-=> ['bye', 'goodnight']
